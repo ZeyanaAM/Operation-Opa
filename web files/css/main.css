@@ -100,25 +100,6 @@ textarea {
 
    #h-container {
      background-color: white;
-     height: 75px;
-     position: fixed;
-     top: 0px;
-     width: 100%;
-     z-index: 99;
-   }
-
-   #header {
-     height: inherit;
-     margin: 0px auto;
-     overflow: hidden;
-     width: 85%;
-
-   }
-
-   #h-container.shrink {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     background-color: white;
      height: 55px;
      position: fixed;
      top: 0px;
@@ -126,8 +107,25 @@ textarea {
      z-index: 99;
    }
 
-   #header.shrink {
+   #header {
      border-bottom: 0.75px solid #cddaf8;
+     height: inherit;
+     margin: 0px auto;
+     overflow: hidden;
+     width: 85%;
+   }
+
+   #h-container.top {
+     background-color: white;
+     height: 75px;
+     position: fixed;
+     top: 0px;
+     width: 100%;
+     z-index: 99;
+   }
+
+   #header.top {
+     border-bottom: none;
      height: inherit;
      margin: 0px auto;
      overflow: hidden;
@@ -152,7 +150,7 @@ textarea {
      float: right;
    }
 
-   #header li a {
+   #header.top li a {
        font-size: 16px;
        display: block;
        text-decoration: none;
@@ -160,7 +158,7 @@ textarea {
        padding: 15px 15px;
    }
 
-   #header.shrink li a {
+   #header li a {
        font-size: 15px;
        display: block;
        text-decoration: none;
@@ -194,14 +192,76 @@ textarea {
 
    .site_map {
        background: #ffeac7;
+       height: 100vh;
+       overflow: hidden;
        position: relative;
        top: 50px;
-       height: 100vh;
        width: 100%;
-
-       overflow: hidden;
    }
 
+   #featured {
+     display: grid;
+     grid-column: auto;
+     height: 65%;
+     left: 8%;
+     position: absolute;
+     top: 15%;
+     width: 85%;
+
+   }
+
+   #farticle1 {
+     display: inline-block;
+     float: left;
+     height: 100%;
+     background-color: grey;
+     position: absolute;
+     width: 30%;
+
+   }
+
+   #farticle2 {
+     display: inline-block;
+     float: left;
+     height: 100%;
+     left: 40%;
+     background-color: grey;
+     position: absolute;
+     width: 30%;
+
+   }
+
+   #farticle3 {
+     display: inline-block;
+     float: right;
+     height: 100%;
+     left: 80%;
+     background-color: grey;
+     position: absolute;
+     width: 30%;
+
+   }
+
+   #f1 {
+     left: 7%;
+   }
+
+   #f2 {
+     left: 37%;
+   }
+
+   #f3 {
+     left: 67%;
+   }
+
+   .fp {
+     bottom: 3%;
+     margin: 0px auto;
+     position: absolute;
+     text-align: left;
+     width: 20%;
+
+   }
 
    .section {
        background-color: white;
@@ -213,10 +273,9 @@ textarea {
    }
 
    .sec_container {
-     width: 85%;
-     overflow: hidden;
-     background-color: black;
      margin: 0px auto;
+     overflow: hidden;
+     width: 85%;
    }
 
    .article {
@@ -401,9 +460,10 @@ textarea {
    }
 
    #a1_1 {
-      bottom: 15px;
-      left: 20px;
-      margin: 40px auto;
+      bottom: 10%;
+      float: left;
+      left: 4%;
+      margin: 0px auto;
       position: absolute;
 
    }
@@ -431,6 +491,12 @@ textarea {
      text-align: left;
    }
 
+
+   @media only screen and (max-width: 768px) {
+     #header .odd, #header .even {
+       display: none;
+     }
+   }
 
 
 
