@@ -117,6 +117,7 @@ textarea {
 
    #h-container.top {
      background-color: white;
+     border-bottom: 0.75px solid #cddaf8;
      height: 75px;
      position: fixed;
      top: 0px;
@@ -125,7 +126,6 @@ textarea {
    }
 
    #header.top {
-     border-bottom: none;
      height: inherit;
      margin: 0px auto;
      overflow: hidden;
@@ -137,7 +137,8 @@ textarea {
      display: block;
      float: left;
      height: 120%;
-     top:20px;
+     position: absolute;
+     top:2%;
    }
 
    #header ul {
@@ -152,9 +153,6 @@ textarea {
 
    #header.top li a {
        font-size: 16px;
-       display: block;
-       text-decoration: none;
-       text-align: center;
        padding: 15px 15px;
    }
 
@@ -166,12 +164,12 @@ textarea {
        padding: 5px 15px;
    }
 
-   .search {
+   #search {
      width: 20px;
    }
 
    .menu {
-     width: 20px;
+     display: none;
    }
 
    .even {
@@ -191,7 +189,6 @@ textarea {
    }
 
    .site_map {
-       background: #ffeac7;
        height: 100vh;
        overflow: hidden;
        position: relative;
@@ -200,67 +197,84 @@ textarea {
    }
 
    #featured {
-     display: grid;
-     grid-column: auto;
-     height: 65%;
-     left: 8%;
+     display: block;
+     height: 100%;
+     left: 1.5%;
      position: absolute;
      top: 15%;
-     width: 85%;
+     overflow: hidden;
+     width: 98%;
+   }
+
+   #ftitle {
+     top: 8%;
+     font-size: 22px;
+   }
+
+   .fheader {
+     margin: 0 auto;
+     width: 100%;
+   }
+
+   .ftextcontainer {
+     height: 25%;
+     left: 4%;
+     position: absolute;
+     top: 72%;
+     width: 92%;
 
    }
 
-   #farticle1 {
-     display: inline-block;
+   .farticle {
+     background: #cddaf8;
+     display: block;
      float: left;
-     height: 100%;
-     background-color: grey;
+     height: 68%;
+     overflow: hidden;
+     padding: 0;
      position: absolute;
-     width: 30%;
-
+     transition: all ease 0.25s;
+     width: 32%;
    }
 
-   #farticle2 {
-     display: inline-block;
-     float: left;
-     height: 100%;
-     left: 40%;
-     background-color: grey;
-     position: absolute;
-     width: 30%;
-
+   .farticle:hover {
+     background: #b3c9fb;
+     transition: all ease 0.25s;
    }
 
-   #farticle3 {
-     display: inline-block;
-     float: right;
-     height: 100%;
-     left: 80%;
-     background-color: grey;
+   .fimage {
+     width: 100%;
+     height: 70%;
+     display: block;
      position: absolute;
-     width: 30%;
+   }
 
+   .fp {
+     font-size: 15px;
+     margin: 0 auto;
+     width: 100%;
    }
 
    #f1 {
-     left: 7%;
+     overflow: hidden;
    }
 
    #f2 {
-     left: 37%;
+     left: 33.5%;
+     overflow: hidden;
    }
 
    #f3 {
      left: 67%;
+     overflow: hidden;
    }
 
-   .fp {
-     bottom: 3%;
-     margin: 0px auto;
-     position: absolute;
-     text-align: left;
-     width: 20%;
 
+   .arrow_down {
+     left: 46%;
+     position: absolute;
+     top: 87%;
+     width: 70px;
    }
 
    .section {
@@ -306,7 +320,7 @@ textarea {
 
    .article_image {
      width: 100%;
-     height: 80%;
+     height: 75%;
      display: block;
      margin-left: auto;
      margin-right: auto;
@@ -349,7 +363,6 @@ textarea {
      width: 30%;
    }
 
-
    .article3 {
      background: #cddaf8;
      position: absolute;
@@ -366,14 +379,6 @@ textarea {
      height: 82%;
      top: 13vh;
      left: 53%
-   }
-
-   .arrow_down {
-     position: absolute;
-     top: 85%;
-     left: 50%;
-     width: 70px;
-
    }
 
    .arrow_right {
@@ -442,7 +447,7 @@ textarea {
 
    h3 {
        position: absolute;
-       top: 40px;
+       top: 7%;/*40px;*/
        margin: 0px;
        left: 8%;
        font-family: "Helvetica";
@@ -459,42 +464,111 @@ textarea {
      font-weight: bold;
    }
 
-   #a1_1 {
-      bottom: 10%;
-      float: left;
-      left: 4%;
-      margin: 0px auto;
+   .textcontainer {
+      display: block;
+      left: 2.5%;
       position: absolute;
-
+      top: 77%;
+      height: 20%;
+      width: 95%;
    }
 
-   #a1_2, #a1_3 {
-      text-align: left;
-      left: 20px;
-      top: -15px;
+   .textcontainer2 {
+      display: block;
+      height: 90%;
+      left: 2.5%;
       position: absolute;
-      width: 34%;
+      top: 4%;
+      width: 30%;
+   }
+
+   #h1 {
+      margin: 0 auto;
+      width: 100%;
+     }
+
+    #h2 {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+     #p1 {
+       margin: 0 auto;
+       width: 100%;
+     }
+
+     #p2 {
+       margin: 0 auto;
+       width: 100%;
+     }
+
+   @media only screen and (max-width: 1000px) {
+      #header li a  {
+        font-size: 14px;
+        padding: 5px 10px;
+     }
+     #search {
+       width: 20px;
+     }
+
+     #header.top li a {
+         font-size: 14px;
+         padding: 15px 15px;
+     }
+
+     #header_img {
+       display: block;
+       float: left;
+       height: 100%;
+       position: absolute;
+       top: 9%;
+
+     }
+
+     #header_img.top {
+       width: 25%;
+     }
+
+     .ftextcontainer {
+       position: absolute;
+       top: 83%;
+
+     }
+
+     .fp, #p1, #p2  {
+       display: none;
+     }
+
+     .fimage {
+       position: absolute;
+       height: 80%;
+     }
+
+     .article_image {
+       height: 80%;
+     }
+
+     .textcontainer {
+       top: 83%;
+
+     }
 
    }
 
-
-   #p1_1 {
-     margin: 40px auto;
-     width: 92%;
-   }
-
-   #p1_2, #p1_3 {
-     margin-top: 40%;
-     padding-left: 20px;
-     right: 10;
-     width: 30%;
-     text-align: left;
-   }
-
-
-   @media only screen and (max-width: 768px) {
+   @media only screen and (max-width: 800px) {
      #header .odd, #header .even {
        display: none;
+     }
+
+     #search {
+       width: 20px;
+     }
+
+     .menu {
+       display: block;
+     }
+     #menu {
+       width: 20px;
      }
    }
 
