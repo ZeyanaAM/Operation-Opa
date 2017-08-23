@@ -639,7 +639,8 @@ textarea {
 
    @media only screen and (max-width: 800px) {
      #header .odd, #header .even {
-       display: none;
+       /*display: none;*/
+       float: left;
      }
 
      #search {
@@ -649,9 +650,57 @@ textarea {
      .menu {
        display: block;
      }
+
      #menu {
        width: 20px;
      }
+
+     #menulist {
+       background-color: #ffeac7;
+       height: 0;
+       right: 7.5%;
+       position: absolute;
+       top: 100%;
+       width: 20%;
+     }
+
+     #menulist.open {
+       background-color: #ffeac7;
+       height: auto;
+       right: 7.5%;
+       position: absolute;
+       top: 100%;
+       width: 20%;
+     }
+
+     #menulist ul {
+       display: none;
+     }
+
+     #menulist ul.open {
+       overflow: hidden;
+       padding: 0;
+       margin: 0 auto;
+     }
+
+     #menulist ul li {
+
+       float: none;
+       font-size: 16px;
+       text-align: center;
+       width: 100%;
+     }
+
+     #menulist ul li a {
+        padding: 8px;
+        width: 100%;
+     }
+
+
+     #menu_link {
+       cursor: pointer;
+     }
+
 
      #featured {
        display: block;
@@ -701,6 +750,8 @@ textarea {
 
 
        }
+
+
 
    }
 

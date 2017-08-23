@@ -1,4 +1,11 @@
 $(document).ready(function() {
+
+	$('#menu_link').on('click', function() {
+
+		$("#menulist").toggleClass("open");
+		$("#menulist ul").toggleClass("open");
+
+	});
 	$(window).scroll(function() {
 		if ($(window).width() > 1024) {
   	if ($(document).scrollTop() < ($(window).height()-75)) {
